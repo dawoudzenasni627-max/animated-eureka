@@ -51,5 +51,5 @@ document.getElementById("openCart").addEventListener("click",openCart);
 document.getElementById("closeCart").addEventListener("click",closeCart);
 overlay.addEventListener("click",closeCart);
 document.getElementById("clearBtn").addEventListener("click",()=>{state.cart=[];renderCart()});
-document.getElementById("checkout").addEventListener("click",()=>{if(!state.cart.length){toastMsg("Ajoute un produit d'abord");return}const url=state.cart[0].url;window.open(url,"_blank","noopener");});
+document.getElementById("checkout").addEventListener("click",()=>{if(!state.cart.length){toastMsg("Ajoute un produit d'abord");return}toastMsg("Paiement par carte prêt — Stripe doit encore être connecté.");});
 renderProducts();renderCart();
