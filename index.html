@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUPER NOVA 🌋</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">🌋 SUPER NOVA</div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#apropos">À propos</a>
+  </nav>
+  <button id="cartBtn">🛒 Panier <span id="count">0</span></button>
+</header>
+
+<main>
+<section id="accueil" class="hero">
+  <div class="lava lava1"></div><div class="lava lava2"></div>
+  <div class="hero-content">
+    <div class="logo">🌋</div>
+    <p class="eyebrow">NOUVELLE COLLECTION</p>
+    <h1>SUPER NOVA</h1>
+    <p>Mode, tech, maison, sport et accessoires. Tout ce qu'il te faut, réuni au même endroit.</p>
+    <a class="cta" href="#boutique">Découvrir la boutique</a>
+  </div>
+</section>
+
+<section id="boutique" class="shop">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">LA BOUTIQUE</p>
+      <h2>Choisis ton style.</h2>
+    </div>
+    <input id="search" type="search" placeholder="Rechercher un produit...">
+  </div>
+  <div class="filters">
+    <button class="filter active" data-cat="Tous">Tous</button>
+    <button class="filter" data-cat="Mode">Mode</button>
+    <button class="filter" data-cat="Tech">Tech</button>
+    <button class="filter" data-cat="Maison">Maison</button>
+    <button class="filter" data-cat="Sport">Sport</button>
+    <button class="filter" data-cat="Beauté">Beauté</button>
+  </div>
+  <div id="products" class="products"></div>
+</section>
+
+<section id="apropos" class="about">
+  <h2>SUPER NOVA</h2>
+  <p>Une boutique moderne inspirée par l'énergie d'un volcan. Le site est prêt pour présenter tes produits et recevoir tes futures commandes.</p>
+</section>
+</main>
+
+<div id="overlay" class="overlay hidden"></div>
+<aside id="cart" class="cart">
+  <div class="cart-head"><h2>Ton panier</h2><button id="closeCart">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-foot">
+    <strong>Total : <span id="total">0,00 €</span></strong>
+    <button id="checkout" class="cta full">Passer la commande</button>
+    <small>Paiement de démonstration : aucune transaction réelle n'est effectuée.</small>
+  </div>
+</aside>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModal" class="close">✕</button>
+    <h2>Finaliser la commande</h2>
+    <p>Entre tes informations pour simuler une commande.</p>
+    <form id="checkoutForm">
+      <input required placeholder="Nom et prénom">
+      <input required type="email" placeholder="E-mail">
+      <input required placeholder="Adresse de livraison">
+      <button class="cta full">Confirmer la commande</button>
+    </form>
+    <div id="success" class="success hidden">Commande simulée avec succès 🎉</div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
