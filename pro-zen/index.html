@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRO ZEN — Athlétisme en promo</title>
+<meta name="description" content="PRO ZEN — sélection athlétisme, pointes et équipement en promotion.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">⚡ PRO ZEN · LES BONNES AFFAIRES ATHLÉTISME · PRIX ET STOCK À VÉRIFIER CHEZ LE VENDEUR</div>
+
+<header class="header">
+  <a href="#home" class="brand"><span class="mark">PZ</span><span>PRO <b>ZEN</b></span></a>
+  <nav><a href="#home">Accueil</a><a href="#products">Promos</a><a href="#events">Disciplines</a><a href="#about">À propos</a></nav>
+  <div class="head-right"><input id="search" type="search" placeholder="Chercher une pointe..."><button id="cartOpen" type="button" class="cart-button">🛒 <b id="count">0</b></button></div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">ATHLÉTISME · PERFORMANCE · PROMOS</div>
+    <h1>COURS.<br><span>SAUTE.</span><br>JUSQU'AU BOUT.</h1>
+    <p>Les meilleures offres du moment sur les pointes et chaussures d’athlétisme des grandes marques.</p>
+    <a class="btn primary" href="#products">Voir les promos →</a>
+    <div class="trust"><span>✓ Nike</span><span>✓ adidas</span><span>✓ PUMA</span><span>✓ Liens vendeurs officiels</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="track"></div>
+    <div class="runner"><div class="r-head"></div><div class="r-body"></div><div class="r-arm a"></div><div class="r-arm b"></div><div class="r-leg a"></div><div class="r-leg b"></div></div>
+    <div class="hero-shoe"><img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto%2Cu_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/ec4b5d29-15ce-41e4-82fb-7e61950a6d59/ZOOM%2BRIVAL%2BSPRINT.png" alt="Nike Zoom Rival Sprint"></div>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="section-head"><div><div class="eyebrow">OFFRES DU MOMENT</div><h2>Pointes en promotion.</h2><p class="muted">Les réductions sont celles observées sur les pages des marques au moment de la création de cette page.</p></div><div class="live">● Sélection actualisée</div></div>
+  <div class="filters">
+    <button class="filter active" data-cat="Tous">Tout</button><button class="filter" data-cat="Sprint">Sprint</button><button class="filter" data-cat="Saut">Saut</button><button class="filter" data-cat="Demi-fond">Demi-fond</button><button class="filter" data-cat="Lancer">Lancer</button>
+  </div>
+  <div id="grid" class="grid"></div>
+  <div class="legal-note">PRO ZEN est une vitrine indépendante. Les marques appartiennent à leurs propriétaires respectifs. Les achats de produits de marque doivent passer par un vendeur autorisé et les images de marque nécessitent les droits d’utilisation appropriés.</div>
+</section>
+
+<section id="events" class="discipline">
+  <div class="section">
+    <div class="eyebrow">CHOISIS TA DISCIPLINE</div><h2>Chaque foulée compte.</h2>
+    <div class="discipline-grid">
+      <button data-cat2="Sprint"><span>100m</span><b>Sprint</b><small>60m · 100m · 200m · 400m</small></button>
+      <button data-cat2="Saut"><span>↗</span><b>Sauts</b><small>Longueur · hauteur · triple saut</small></button>
+      <button data-cat2="Demi-fond"><span>800</span><b>Demi-fond</b><small>800m · 1500m · steeple</small></button>
+      <button data-cat2="Lancer"><span>◉</span><b>Lancers</b><small>Javelot · poids · disque</small></button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div><div class="eyebrow">PRO ZEN</div><h2>Simple à trouver.<br>Facile à comparer.</h2><p>PRO ZEN rassemble une sélection d’offres d’athlétisme et renvoie vers les fiches officielles pour vérifier tailles, stock, prix et conditions.</p></div>
+  <div class="about-card"><b>PAYMENT</b><strong>Paiement sécurisé</strong><span>Le bouton de paiement est prêt à être relié à un prestataire de paiement.</span></div>
+</section>
+</main>
+
+<aside id="cart" class="cart" aria-hidden="true">
+  <div class="cart-head"><div><div class="eyebrow">PANIER PRO ZEN</div><h2>Ta sélection</h2></div><button id="cartClose" class="x" type="button">×</button></div>
+  <div id="items" class="items"></div>
+  <div class="cart-bottom"><div class="tot"><span>Total</span><b id="total">0,00 €</b></div><button id="pay" class="btn primary full" type="button">Payer →</button><small>Le paiement réel nécessite un compte de paiement relié au site. Les comptes de paiement destinés aux mineurs doivent être gérés par un représentant légal.</small><button id="empty" class="clear" type="button">Vider</button></div>
+</aside>
+<div id="overlay" class="overlay hidden"></div>
+<div id="toast" class="toast"></div>
+<footer class="footer"><div class="brand"><span class="mark">PZ</span><span>PRO <b>ZEN</b></span></div><span>© 2026 PRO ZEN</span><span>Athlétisme · Promos · Performance</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
