@@ -3,84 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NOVA SHOP — Style & énergie</title>
-<meta name="description" content="NOVA SHOP — vêtements, accessoires et lifestyle.">
+<meta name="description" content="NOVA SHOP — mode, accessoires et lifestyle.">
+<title>NOVA SHOP — Mode & Lifestyle</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="topbar">NOUVEAU DROP · LIVRAISON OFFERTE DÈS 60 € · RETOURS 14 JOURS</div>
-
+<div class="announcement">LIVRAISON OFFERTE DÈS 60 € · NOUVEAUTÉS CHAQUE SEMAINE</div>
 <header class="header">
-  <a href="#accueil" class="logo"><span class="logo-icon">✦</span><span>NOVA <b>SHOP</b></span></a>
+  <a class="brand" href="#home"><span class="brand-mark">✦</span><span>NOVA <strong>SHOP</strong></span></a>
   <nav class="nav">
-    <a href="#accueil">Accueil</a><a href="#shop">Boutique</a><a href="#models">Lookbook</a><a href="#about">À propos</a>
+    <a href="#home">Accueil</a><a href="#shop">Boutique</a><a href="#lookbook">Lookbook</a><a href="#about">À propos</a>
   </nav>
-  <button id="cartOpen" class="cart-btn" type="button">🛒 <span>Panier</span> <b id="cartCount">0</b></button>
+  <div class="header-actions">
+    <label class="header-search"><span>⌕</span><input id="headerSearch" type="search" placeholder="Rechercher un produit..."></label>
+    <button class="circle" type="button" aria-label="Compte">◯</button>
+    <button id="openCart" class="cart-btn" type="button">🛒 <span>Panier</span><b id="cartCount">0</b></button>
+  </div>
 </header>
 
 <main>
-<section id="accueil" class="hero">
+<section id="home" class="hero">
   <div class="hero-copy">
-    <div class="eyebrow">STYLE · ÉNERGIE · ATTITUDE</div>
-    <h1>PORTE TON<br><span>UNIVERS.</span></h1>
-    <p>Une nouvelle génération de pièces streetwear et lifestyle, présentées sur des figurants stylisés.</p>
-    <div class="hero-actions"><a href="#shop" class="btn primary">Découvrir la collection →</a><a href="#models" class="btn ghost">Voir le lookbook</a></div>
-    <div class="hero-trust"><span>✓ Paiement sécurisé</span><span>✓ Livraison suivie</span><span>✓ Service client</span></div>
+    <div class="eyebrow">STYLE · QUALITÉ · ÉLÉGANCE</div>
+    <h1>SUPER <span>NOVA</span></h1>
+    <p>Des produits uniques pour un style qui te ressemble.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#shop">Découvrir la boutique <span>→</span></a><a class="btn ghost" href="#lookbook">Voir le lookbook</a></div>
+    <div class="trust"><span>✓ Livraison rapide</span><span>✓ Paiement sécurisé</span><span>✓ Service client 7j/7</span></div>
   </div>
-  <div class="hero-art">
-    <div class="blob blob-a"></div><div class="blob blob-b"></div>
-    <div class="hero-card">
-      <div class="hero-card-top"><span>NOVA / 01</span><span>DROP</span></div>
-      <div class="model model-hoodie">
-        <div class="m-head"></div><div class="m-hair"></div><div class="m-neck"></div><div class="m-body"></div><div class="m-arm left"></div><div class="m-arm right"></div>
-        <div class="m-brand">N</div>
-      </div>
-      <div class="hero-card-bottom"><b>HOODIE NOVA</b><span>39,99 €</span></div>
+  <div class="hero-stage">
+    <div class="mountains"></div>
+    <div class="sun"></div>
+    <div class="lava"></div>
+    <div class="hero-model">
+      <div class="model-head"></div><div class="model-hair"></div><div class="model-neck"></div>
+      <div class="model-body hoodie"></div><div class="model-arm left"></div><div class="model-arm right"></div>
+      <div class="logo-print">N</div><div class="model-cap"></div>
     </div>
   </div>
+</section>
+
+<section class="category-strip">
+  <a href="#shop" data-jump="Hoodies"><span>◒</span><b>Hoodies</b><small>Confort & style</small></a>
+  <a href="#shop" data-jump="Chaussures"><span>◈</span><b>Sneakers</b><small>Marche avec style</small></a>
+  <a href="#shop" data-jump="T-shirts"><span>◫</span><b>T-shirts</b><small>Simple & efficace</small></a>
+  <a href="#shop" data-jump="Accessoires"><span>✦</span><b>Casquettes</b><small>L’accessoire parfait</small></a>
+  <a href="#shop" data-jump="Pantalons"><span>◉</span><b>Pantalons</b><small>Liberté de mouvement</small></a>
+  <a href="#shop" data-jump="Vestes"><span>◇</span><b>Vestes</b><small>Protection & style</small></a>
 </section>
 
 <section id="shop" class="section">
-  <div class="section-head">
-    <div><div class="eyebrow">SHOP</div><h2>Les pièces du moment.</h2></div>
-    <input id="search" type="search" placeholder="Rechercher un produit…">
+  <div class="section-title"><div><div class="eyebrow">LA BOUTIQUE</div><h2>Nos produits phares</h2></div><a class="see-all" href="#shop">Voir tous les produits →</a></div>
+  <div class="filter-row">
+    <button class="filter active" data-cat="Tous">Tous</button><button class="filter" data-cat="Hoodies">Hoodies</button><button class="filter" data-cat="T-shirts">T-shirts</button><button class="filter" data-cat="Chaussures">Sneakers</button><button class="filter" data-cat="Accessoires">Accessoires</button><button class="filter" data-cat="Vestes">Vestes</button><button class="filter" data-cat="Pantalons">Pantalons</button>
   </div>
-  <div class="filters" id="filters">
-    <button class="filter active" data-cat="Tous" type="button">Tout</button>
-    <button class="filter" data-cat="Hoodies" type="button">Hoodies</button>
-    <button class="filter" data-cat="T-shirts" type="button">T-shirts</button>
-    <button class="filter" data-cat="Chaussures" type="button">Chaussures</button>
-    <button class="filter" data-cat="Accessoires" type="button">Accessoires</button>
-  </div>
-  <div id="products" class="grid"></div>
+  <div id="products" class="products"></div>
 </section>
 
-<section id="models" class="lookbook">
-  <div class="section lookbook-inner">
-    <div class="section-head"><div><div class="eyebrow">LOOKBOOK</div><h2>Nos figurants, ton style.</h2></div><span class="muted">Visualise les pièces avant de les ajouter au panier.</span></div>
-    <div class="look-grid">
-      <article class="look-card"><div class="look-scene purple"><div class="model model-tshirt"><div class="m-head"></div><div class="m-hair"></div><div class="m-neck"></div><div class="m-body tshirt"></div><div class="m-arm left"></div><div class="m-arm right"></div><div class="m-brand">N</div></div></div><div class="look-caption"><b>T-shirt Essential</b><span>24,99 €</span></div></article>
-      <article class="look-card"><div class="look-scene blue"><div class="model model-cap"><div class="m-head"></div><div class="m-hair"></div><div class="cap-shape"></div><div class="m-neck"></div><div class="m-body jacket"></div><div class="m-arm left"></div><div class="m-arm right"></div><div class="m-brand">N</div></div></div><div class="look-caption"><b>Veste Tech</b><span>79,99 €</span></div></article>
-      <article class="look-card"><div class="look-scene red"><div class="model model-hoodie"><div class="m-head"></div><div class="m-hair"></div><div class="m-neck"></div><div class="m-body"></div><div class="m-arm left"></div><div class="m-arm right"></div><div class="m-brand">N</div></div></div><div class="look-caption"><b>Hoodie Nova</b><span>39,99 €</span></div></article>
+<section id="lookbook" class="lookbook">
+  <div class="section">
+    <div class="section-title"><div><div class="eyebrow">LOOKBOOK</div><h2>Le style, porté.</h2></div><p class="muted">Des figurants stylisés présentent nos pièces.</p></div>
+    <div class="looks">
+      <article class="look"><div class="look-bg purple"><div class="mini-model"><i class="h"></i><i class="hair"></i><i class="body shirt"></i><i class="arm a1"></i><i class="arm a2"></i><b>N</b></div></div><div><strong>T-shirt Essential</strong><span>24,99 €</span></div></article>
+      <article class="look"><div class="look-bg blue"><div class="mini-model"><i class="h"></i><i class="hair"></i><i class="cap"></i><i class="body jacket"></i><i class="arm a1"></i><i class="arm a2"></i><b>N</b></div></div><div><strong>Veste Tech</strong><span>79,99 €</span></div></article>
+      <article class="look"><div class="look-bg pink"><div class="mini-model"><i class="h"></i><i class="hair"></i><i class="body hoodie"></i><i class="arm a1"></i><i class="arm a2"></i><b>N</b></div></div><div><strong>Hoodie Nova</strong><span>39,99 €</span></div></article>
     </div>
   </div>
 </section>
 
-<section id="about" class="section about">
-  <div class="about-grid"><div><div class="eyebrow">LA MARQUE</div><h2>Simple. Moderne. NOVA.</h2><p>NOVA SHOP mélange lignes premium, couleurs électriques et pièces faciles à porter. Les figurants du lookbook sont des visuels stylisés pour présenter les produits.</p></div><div class="benefits"><div><b>01</b><span>Collection renouvelée</span></div><div><b>02</b><span>Expérience mobile</span></div><div><b>03</b><span>Panier rapide</span></div></div></div>
+<section id="about" class="about section">
+  <div class="about-left"><div class="eyebrow">POURQUOI NOVA ?</div><h2>Une boutique qui a du caractère.</h2><p>NOVA SHOP associe une identité forte, des pièces faciles à porter et une expérience simple sur mobile comme sur ordinateur.</p></div>
+  <div class="about-points"><div><b>01</b><span>Collection moderne</span></div><div><b>02</b><span>Expérience rapide</span></div><div><b>03</b><span>Livraison suivie</span></div></div>
 </section>
 </main>
 
-<aside id="cartPanel" class="cart-panel" aria-hidden="true">
-  <div class="cart-head"><div><div class="eyebrow">PANIER</div><h2>Ta sélection</h2></div><button id="cartClose" class="x" type="button">×</button></div>
+<aside id="cart" class="cart">
+  <div class="cart-top"><div><div class="eyebrow">TON PANIER</div><h2>Votre sélection</h2></div><button id="closeCart" class="close" type="button" aria-label="Fermer">×</button></div>
   <div id="cartItems" class="cart-items"></div>
-  <div class="cart-bottom"><div class="total"><span>Total</span><b id="cartTotal">0,00 €</b></div><button id="orderBtn" class="btn primary full" type="button">Commander</button><button id="clearBtn" class="clear" type="button">Vider le panier</button><small>Paiement réel non activé sur cette démo.</small></div>
+  <div class="cart-bottom"><div class="subtotal"><span>Sous-total</span><strong id="cartTotal">0,00 €</strong></div><div class="shipping"><span>Livraison</span><b>Gratuite</b></div><button id="checkout" class="btn primary full" type="button">Commander →</button><small>🔒 Paiement de démonstration uniquement</small></div>
 </aside>
-<div id="backdrop" class="backdrop hidden"></div>
+<div id="overlay" class="overlay hidden"></div>
 
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="toast" class="toast"></div>
 
-<footer class="footer"><div class="logo"><span class="logo-icon">✦</span><span>NOVA <b>SHOP</b></span></div><span>© 2026 Nova Shop</span><div class="footer-links"><a href="#about">À propos</a><a href="#shop">Boutique</a></div></footer>
+<footer class="footer"><div class="brand"><span class="brand-mark">✦</span><span>NOVA <strong>SHOP</strong></span></div><div class="footer-nav"><a href="#home">Accueil</a><a href="#shop">Boutique</a><a href="#about">À propos</a></div><span>© 2026 Nova Shop</span></footer>
 
 <script src="script.js"></script>
 </body>
