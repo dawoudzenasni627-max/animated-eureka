@@ -25,3 +25,4 @@ document.getElementById("cartOpen").addEventListener("click",openCart);document.
 document.getElementById("empty").addEventListener("click",()=>{state.cart=[];cartRender()});
 document.getElementById("pay").addEventListener("click",()=>{if(!state.cart.length){say("Ajoute un produit d’abord");return}say("Le paiement doit encore être relié à un compte de paiement");});
 render();cartRender();
+// T-shirts running présentés sur les pages promos officielles des marques.
