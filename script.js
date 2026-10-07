@@ -3,7 +3,7 @@ const PRODUCTS=[
 {name:"Nike Sportswear Club",cat:"T-shirts",price:24.99,source:"Nike",url:"https://www.nike.com/fr/t/t-shirt-nike-sportswear-club-pour-homme-bVD3j8",visual:"blue",badge:"RÉEL"},
 {name:"Veste à capuche Essentials 3-Stripes",cat:"Hoodies",price:45.50,source:"adidas",url:"https://www.adidas.fr/sweat-shirt-a-capuche-entierement-zippee-molleton-3-bandes-essentials/GK9051.html",visual:"dark",badge:"RÉEL"},
 {name:"G-SHOCK GMA-S2100PR-4A",cat:"Montres",price:99.90,source:"Casio",url:"https://gshock.casio.com/fr/",visual:"pink",badge:"RÉEL"},
-{name:"New York Yankees Game 9FORTY M-Crown Snapback",cat:"Accessoires",price:38.99,source:"New Era",url:"https://www.neweracap.com/pages/team/new-york-yankees",visual:"purple",badge:"RÉEL"},
+{name:"Survêtement 3 bandes Essentials",cat:"Shorts",price:49.00,source:"adidas",url:"https://www.adidas.fr/survetement-3-bandes-essentials/GK9651.html",visual:"purple",badge:"RÉEL"},
 {name:"Short Essentials French Terry 3-Stripes",cat:"Shorts",price:21.45,source:"adidas",url:"https://www.adidas.fr/short-essentials-french-terry-3-stripes/GK9597.html",visual:"blue",badge:"RÉEL"}
 ];
 const state={cat:"Tous",query:"",cart:[]};
