@@ -69,7 +69,41 @@ const SHOE_DROP=[
 ];
 PRODUCTS.push(...SHOE_DROP);
 
-const state={filter:"Tous",query:"",cart:[],selected:null,size:"",color:"",qty:1};
+
+const STORE_PRODUCTS=[
+["Nike Dri-FIT Academy Hoodie","NIKE","Vêtements",65,null,"","https://www.nike.com/fr/","https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1000&q=90"],
+["adidas Essentials Sweatshirt","ADIDAS","Vêtements",60,null,"","https://www.adidas.fr/","https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Evostripe Jogger","PUMA","Vêtements",70,null,"","https://eu.puma.com/fr/fr/","https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=1000&q=90"],
+["Nike Dri-FIT Running Long Sleeve","NIKE","Vêtements",50,null,"","https://www.nike.com/fr/","https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Wind Jacket","ADIDAS","Vêtements",90,null,"","https://www.adidas.fr/","https://images.unsplash.com/photo-1544923246-77307dd628b5?auto=format&fit=crop&w=1000&q=90"],
+["Nike Running Leggings","NIKE","Vêtements",55,null,"","https://www.nike.com/fr/","https://images.unsplash.com/photo-1506629905607-d9c9b5d9e3f2?auto=format&fit=crop&w=1000&q=90"],
+["ASICS Core Jacket","ASICS","Vêtements",75,null,"","https://www.asics.com/fr/fr-fr/","https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Performance Tee","PRO ZEN","Vêtements",35,null,"","#","https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Oversize Hoodie","PRO ZEN","Vêtements",75,null,"","#","https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Track Pants","PRO ZEN","Vêtements",65,null,"","#","https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=1000&q=90"],
+["Running Crew Socks 3P","PRO ZEN","Accessoires",18,null,"","#","https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=1000&q=90"],
+["Performance Running Cap","PRO ZEN","Accessoires",25,null,"","#","https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=1000&q=90"],
+["Running Headband","PRO ZEN","Accessoires",15,null,"","#","https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=90"],
+["Sport Gloves","PRO ZEN","Accessoires",28,null,"","#","https://images.unsplash.com/photo-1517838277536-f5f99be501f1?auto=format&fit=crop&w=1000&q=90"],
+["Performance Arm Sleeves","PRO ZEN","Accessoires",30,null,"","#","https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=90"],
+["Running Waist Belt","PRO ZEN","Accessoires",30,null,"","#","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Training Backpack","PRO ZEN","Sacs",55,null,"","#","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Gym Bag","PRO ZEN","Sacs",45,null,"","#","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=90"],
+["Running Soft Flask 500ml","PRO ZEN","Hydratation",20,null,"","#","https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=1000&q=90"],
+["Sport Water Bottle","PRO ZEN","Hydratation",15,null,"","#","https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=1000&q=90"],
+["Running Towel","PRO ZEN","Accessoires",18,null,"","#","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"],
+["Training Resistance Bands","PRO ZEN","Training",25,null,"","#","https://images.unsplash.com/photo-1517838277536-f5f99be501f1?auto=format&fit=crop&w=1000&q=90"],
+["Yoga / Training Mat","PRO ZEN","Training",35,null,"","#","https://images.unsplash.com/photo-1599447292180-45fd84092ef4?auto=format&fit=crop&w=1000&q=90"],
+["Running Sunglasses","PRO ZEN","Accessoires",40,null,"","#","https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=90"],
+["Everyday Sneakers","PRO ZEN","Chaussures",85,null,"","#","https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1000&q=90"],
+["Training Cross-Training Shoes","PRO ZEN","Chaussures",110,null,"","#","https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=90"],
+["Trail Running Shoes","PRO ZEN","Chaussures",125,null,"","#","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90"],
+["Indoor Training Shoes","PRO ZEN","Chaussures",95,null,"","#","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"],
+["Casual Slides","PRO ZEN","Chaussures",35,null,"","#","https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=1000&q=90"],
+["PRO ZEN Gift Card 50€","PRO ZEN","Cadeaux",50,null,"","#","https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1000&q=90"]
+];
+PRODUCTS.push(...STORE_PRODUCTS);
+\nconst state={filter:"Tous",query:"",cart:[],selected:null,size:"",color:"",qty:1};
 const $=id=>document.getElementById(id);
 const money=n=>n==null?"Voir le prix":new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
 
