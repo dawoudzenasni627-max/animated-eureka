@@ -9,7 +9,7 @@ function colorsFor(p){if(p.cat==="Parfums")return["Standard"];return["Noir","Bla
 function cardHTML(p){
  const idx=PRODUCTS.indexOf(p);
  const pricing=p.price?((p.old?'<span class="old">'+money(p.old)+'</span>':"")+'<span class="price">'+money(p.price)+'</span>'):'<span class="price">Voir le prix</span>';
- return '<article class="product-card" data-open="'+idx+'"><div class="product-photo">'+(p.discount?'<span class="tag">'+p.discount+'</span>':"")+'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.parentElement.classList.add(\'image-fallback\');this.remove()"></div><div class="product-info"><div class="product-brand">'+p.brand+' · '+p.cat.toUpperCase()+'</div><h3>'+p.name+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+pricing+'</span></div><div class="click-hint">Cliquer pour voir la fiche →</div></div></article>';
+ return '<article class="product-card" data-open="'+idx+'"><div class="product-photo">'+(p.discount?'<span class="tag">'+p.discount+'</span>':"")+'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.parentElement.classList.add(\'image-fallback\');this.remove()"></div><div class="product-info"><div class="product-brand">'+p.brand+' · '+p.cat.toUpperCase()+'</div><h3>'+p.name+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+pricing+'</span></div><a class="official-card-link" href="'+p.url+'" target="_blank" rel="noopener">Voir chez '+p.brand+' ↗</a><div class="click-hint">Cliquer pour choisir taille / couleur →</div></div></article>';
 }
 function miniHTML(p){const idx=PRODUCTS.indexOf(p);return '<article class="mini-card" data-open="'+idx+'"><div class="mini-photo"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy"></div><div><strong>'+p.name+'</strong><span>'+p.brand+'</span></div></article>'}
 function perfumeHTML(p){const idx=PRODUCTS.indexOf(p);return '<article class="perfume-card" data-open="'+idx+'"><div class="perfume-photo"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy"></div><div><small>'+p.brand+'</small><h3>'+p.name+'</h3></div></article>'}
@@ -58,7 +58,6 @@ document.getElementById("minus").addEventListener("click",()=>{state.qty=Math.ma
 document.getElementById("plus").addEventListener("click",()=>{state.qty=Math.min(10,state.qty+1);document.getElementById("qty").textContent=state.qty});
 document.getElementById("addVariant").addEventListener("click",()=>{const p=state.selected,found=state.cart.find(x=>x.id===PRODUCTS.indexOf(p)&&x.size===state.size&&x.color===state.color);if(found)found.qty+=state.qty;else state.cart.push({...p,id:PRODUCTS.indexOf(p),size:state.size,color:state.color,qty:state.qty});renderCart();closeModal();say("Article ajouté au panier ✓")});
 document.getElementById("modalClose").addEventListener("click",closeModal);
-document.getElementById("playVoice").addEventListener("click",speakBismillah);
 document.getElementById("cartOpen").addEventListener("click",openCart);
 document.getElementById("cartClose").addEventListener("click",closeCart);
 overlay.addEventListener("click",closeCart);
