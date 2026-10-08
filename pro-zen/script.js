@@ -54,6 +54,21 @@ const NEW_DROP=[
 ];
 PRODUCTS.push(...NEW_DROP);
 
+
+const SHOE_DROP=[
+["Nike Air Max Dn8","NIKE","Chaussures",129.99,null,"","https://www.nike.com/fr/","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90"],
+["adidas Ultraboost 5","ADIDAS","Chaussures",180,null,"","https://www.adidas.fr/","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Fast-R NITRO Elite","PUMA","Chaussures",250,null,"","https://eu.puma.com/fr/fr/","https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1000&q=90"],
+["ASICS GEL-Cumulus","ASICS","Chaussures",150,null,"","https://www.asics.com/fr/fr-fr/","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1000&q=90"],
+["HOKA Bondi 9","HOKA","Chaussures",180,null,"","https://www.hoka.com/fr/fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["New Balance FuelCell Rebel","NEW BALANCE","Chaussures",150,null,"","https://www.newbalance.fr/","https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1000&q=90"],
+["Saucony Endorphin Speed","SAUCONY","Chaussures",190,null,"","https://www.saucony.com/fr/fr/","https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=90"],
+["Brooks Ghost","BROOKS","Chaussures",150,null,"","https://www.brooksrunning.com/fr_fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["Mizuno Wave Rider","MIZUNO","Chaussures",160,null,"","https://emea.mizuno.com/fr/fr/","https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=1000&q=90"],
+["On Cloudmonster","ON","Chaussures",180,null,"","https://www.on.com/fr-fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"]
+];
+PRODUCTS.push(...SHOE_DROP);
+
 const state={filter:"Tous",query:"",cart:[],selected:null,size:"",color:"",qty:1};
 const $=id=>document.getElementById(id);
 const money=n=>n==null?"Voir le prix":new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
