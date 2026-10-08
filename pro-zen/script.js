@@ -9,7 +9,7 @@ function colorsFor(p){if(p.cat==="Parfums")return["Standard"];return["Noir","Bla
 function cardHTML(p){
  const idx=PRODUCTS.indexOf(p);
  const pricing=p.price?((p.old?'<span class="old">'+money(p.old)+'</span>':"")+'<span class="price">'+money(p.price)+'</span>'):'<span class="price">Voir le prix</span>';
- return '<article class="product-card" data-open="'+idx+'"><div class="product-photo">'+(p.discount?'<span class="tag">'+p.discount+'</span>':"")+'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.style.display=\'none\'"></div><div class="product-info"><div class="product-brand">'+p.brand+' · '+p.cat.toUpperCase()+'</div><h3>'+p.name+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+pricing+'</span></div></div></article>';
+ return '<article class="product-card" data-open="'+idx+'"><div class="product-photo">'+(p.discount?'<span class="tag">'+p.discount+'</span>':"")+'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.parentElement.classList.add(\'image-fallback\');this.remove()"></div><div class="product-info"><div class="product-brand">'+p.brand+' · '+p.cat.toUpperCase()+'</div><h3>'+p.name+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+pricing+'</span></div><div class="click-hint">Cliquer pour voir la fiche →</div></div></article>';
 }
 function miniHTML(p){const idx=PRODUCTS.indexOf(p);return '<article class="mini-card" data-open="'+idx+'"><div class="mini-photo"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy"></div><div><strong>'+p.name+'</strong><span>'+p.brand+'</span></div></article>'}
 function perfumeHTML(p){const idx=PRODUCTS.indexOf(p);return '<article class="perfume-card" data-open="'+idx+'"><div class="perfume-photo"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy"></div><div><small>'+p.brand+'</small><h3>'+p.name+'</h3></div></article>'}
@@ -28,8 +28,18 @@ function setFilter(f){state.filter=f;document.querySelectorAll(".filter").forEac
 function openCart(){cart.classList.add("open");overlay.classList.remove("hidden");document.body.classList.add("lock")}
 function closeCart(){cart.classList.remove("open");overlay.classList.add("hidden");document.body.classList.remove("lock")}
 function say(t){toast.textContent=t;toast.classList.add("show");clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove("show"),1700)}
+function speakBismillah(){
+ if(!("speechSynthesis" in window)){say("Ton navigateur ne prend pas en charge la voix");return}
+ window.speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance("Allez, Bismillah, achète-moi pour ton fils !");
+ u.lang="fr-FR";
+ u.rate=0.95;
+ u.pitch=1.05;
+ window.speechSynthesis.speak(u);
+}
 function openModal(i){
  const p=PRODUCTS[i],sizes=sizesFor(p),colors=colorsFor(p);
+ speakBismillah();
  state.selected=p;state.size=sizes[0];state.color=colors[0];state.qty=1;
  document.getElementById("modalImg").src=p.img;document.getElementById("modalImg").alt=p.name;document.getElementById("modalBrand").textContent=p.brand+" · "+p.cat.toUpperCase();document.getElementById("modalTitle").textContent=p.name;document.getElementById("modalPrice").textContent=p.price?money(p.price):"Voir le prix";document.getElementById("modalDescription").textContent="Choisis ta taille, ta couleur et ta quantité avant d'ajouter l'article au panier.";document.getElementById("official").href=p.url;document.getElementById("qty").textContent="1";
  document.getElementById("sizes").innerHTML=sizes.map((x,n)=>'<button class="option '+(n===0?"selected":"")+'" data-size="'+x+'">'+x+'</button>').join("");
@@ -48,6 +58,7 @@ document.getElementById("minus").addEventListener("click",()=>{state.qty=Math.ma
 document.getElementById("plus").addEventListener("click",()=>{state.qty=Math.min(10,state.qty+1);document.getElementById("qty").textContent=state.qty});
 document.getElementById("addVariant").addEventListener("click",()=>{const p=state.selected,found=state.cart.find(x=>x.id===PRODUCTS.indexOf(p)&&x.size===state.size&&x.color===state.color);if(found)found.qty+=state.qty;else state.cart.push({...p,id:PRODUCTS.indexOf(p),size:state.size,color:state.color,qty:state.qty});renderCart();closeModal();say("Article ajouté au panier ✓")});
 document.getElementById("modalClose").addEventListener("click",closeModal);
+document.getElementById("playVoice").addEventListener("click",speakBismillah);
 document.getElementById("cartOpen").addEventListener("click",openCart);
 document.getElementById("cartClose").addEventListener("click",closeCart);
 overlay.addEventListener("click",closeCart);
