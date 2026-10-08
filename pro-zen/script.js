@@ -42,6 +42,17 @@ const MORE_PRODUCTS=[
 ["Nike AeroSwift Running Singlet","NIKE","Vêtements",60,null,"","https://www.nike.com/fr/w/running-tops-37v7jz9om4","https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=90"]
 ];
 PRODUCTS.push(...MORE_PRODUCTS);
+const NEW_DROP=[
+["Nike Alphafly 3","NIKE","Running",299.99,null,"","https://www.nike.com/fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Takumi Sen","ADIDAS","Running",180,null,"","https://www.adidas.fr/running","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"],
+["ASICS Metaspeed Sky","ASICS","Running",250,null,"","https://www.asics.com/fr/fr-fr/","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1000&q=90"],
+["HOKA Mach X 2","HOKA","Running",190,null,"","https://www.hoka.com/fr/fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["Nike Dri-FIT ADV AeroSwift Tee","NIKE","Vêtements",70,null,"","https://www.nike.com/fr/w/running-tops-37v7jz9om4","https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Singlet","ADIDAS","Vêtements",60,null,"","https://www.adidas.fr/running","https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Run Ultraform Jacket","PUMA","Vêtements",85,null,"","https://eu.puma.com/fr/fr/sports/running","https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1000&q=90"],
+["Nike AeroSwift Running Shorts","NIKE","Vêtements",60,null,"","https://www.nike.com/fr/w/running-shorts-37v7jz9om4","https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=90"]
+];
+PRODUCTS.push(...NEW_DROP);
 
 const state={filter:"Tous",query:"",cart:[],selected:null,size:"",color:"",qty:1};
 const $=id=>document.getElementById(id);
