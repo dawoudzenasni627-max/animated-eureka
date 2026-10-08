@@ -52,8 +52,9 @@ function colors(p){return p[2]==="Parfums"?["Standard"]:["Noir","Blanc","Bleu","
 
 function card(p,i){
  const price=p[3]!=null?money(p[3]):"Voir le prix";
- const old=p[4]!=null?'<span class="old">'+money(p[4])+"</span>":"";
- return '<article class="product-card" data-open="'+i+'"><div class="product-photo">'+(p[5]?'<span class="tag">'+p[5]+"</span>":"")+'<img src="'+p[7]+'" alt="'+p[0]+'" loading="lazy" onerror="this.style.display=\'none\'"></div><div class="product-info"><div class="product-brand">'+p[1]+" · "+p[2].toUpperCase()+'</div><h3>'+p[0]+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+old+'<span class="price">'+price+"</span></span></div><a class="official-card-link" href=""+p[6]+"" target="_blank" rel="noopener" onclick="event.stopPropagation()">Voir chez "+p[1]+" ↗</a><div class="click-hint">Cliquer pour choisir →</div></div></article>";
+ const oldPrice=p[4]!=null?'<span class="old">'+money(p[4])+'</span>':"";
+ const tag=p[5]?'<span class="tag">'+p[5]+'</span>':"";
+ return '<article class="product-card" data-open="'+i+'"><div class="product-photo">'+tag+'<img src="'+p[7]+'" alt="'+p[0]+'" loading="lazy"></div><div class="product-info"><div class="product-brand">'+p[1]+' · '+p[2].toUpperCase()+'</div><h3>'+p[0]+'</h3><div class="product-meta"><span class="rating">★★★★★</span><span>'+oldPrice+'<span class="price">'+price+'</span></span></div><a class="official-card-link" href="'+p[6]+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">VOIR CHEZ '+p[1]+' ↗</a><div class="click-hint">Cliquer pour choisir →</div></div></article>';
 }
 function render(){
  const list=PRODUCTS.filter(p=>{
