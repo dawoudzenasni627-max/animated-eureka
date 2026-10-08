@@ -25,6 +25,24 @@ const PRODUCTS=[
 ["Jean Paul Gaultier Le Male","JEAN PAUL GAULTIER","Parfums",90,null,"","https://www.jeanpaulgaultier.com/fr/fr/parfums/","https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1000&q=90"]
 ];
 
+const MORE_PRODUCTS=[
+["Nike Pegasus 42","NIKE","Running",139.99,null,"","https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-pegasus-42-pour-homme-M9ckDyR3/IB1873-001","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Boston 13","ADIDAS","Running",160,null,"","https://www.adidas.fr/chaussures-running-adizero","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Adios Pro 5","ADIDAS","Running",260,null,"","https://www.adidas.fr/running","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Deviate NITRO 4","PUMA","Running",170,null,"","https://eu.puma.com/fr/fr/sports/running/chaussures-de-running","https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1000&q=90"],
+["PUMA MagMax NITRO 2","PUMA","Running",200,null,"","https://eu.puma.com/fr/fr/sports/running/chaussures-de-running","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90"],
+["ASICS Novablast","ASICS","Running",150,null,"","https://www.asics.com/fr/fr-fr/","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1000&q=90"],
+["ASICS Gel-Kayano","ASICS","Running",200,null,"","https://www.asics.com/fr/fr-fr/","https://images.unsplash.com/photo-1554132797-8b13a0f89cc4?auto=format&fit=crop&w=1000&q=90"],
+["Nike Dri-FIT ADV Running T-Shirt","NIKE","Vêtements",55,null,"","https://www.nike.com/fr/w/running-tops-37v7jz9om4","https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Running Tee","ADIDAS","Vêtements",50,null,"","https://www.adidas.fr/running","https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Running Favourite Tee","PUMA","Vêtements",40,null,"","https://eu.puma.com/fr/fr/sports/running","https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1000&q=90"],
+["Nike Dri-FIT Challenger Shorts","NIKE","Vêtements",45,null,"","https://www.nike.com/fr/w/running-shorts-37v7jz9om4","https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=90"],
+["adidas Adizero Running Short","ADIDAS","Vêtements",55,null,"","https://www.adidas.fr/running","https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1000&q=90"],
+["PUMA Run Ultraform Shorts","PUMA","Vêtements",45,null,"","https://eu.puma.com/fr/fr/sports/running","https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=90"],
+["Nike AeroSwift Running Singlet","NIKE","Vêtements",60,null,"","https://www.nike.com/fr/w/running-tops-37v7jz9om4","https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=90"]
+];
+PRODUCTS.push(...MORE_PRODUCTS);
+
 const state={filter:"Tous",query:"",cart:[],selected:null,size:"",color:"",qty:1};
 const $=id=>document.getElementById(id);
 const money=n=>n==null?"Voir le prix":new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
