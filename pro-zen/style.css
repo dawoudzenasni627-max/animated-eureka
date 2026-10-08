@@ -24,3 +24,4 @@
 @media(max-width:600px){.look-grid{grid-template-columns:1fr}.photo-ribbon{grid-template-columns:1fr}.photo-ribbon img{height:200px}.brands img{width:45px}}
 
 .product-photo{height:280px!important;background:#f7f7f7}.product-photo img{object-fit:contain!important;padding:12px}.photo-note{margin:16px 0 0;color:#7f8a99;font-size:.74rem}.modal-media{background:#f7f7f7;display:flex;align-items:center;justify-content:center}.modal-media img{object-fit:contain!important;padding:20px}.voice-btn{width:100%;margin:12px 0 8px;border:1px solid #395066;background:#111b25;color:#dff8ff;border-radius:10px;padding:10px;font-weight:900;cursor:pointer}.voice-btn:hover{border-color:#13d8ff;background:#102531}
+.official-card-link{display:block;margin-top:10px;color:#b7ff33;font-size:.72rem;font-weight:900}.official-card-link:hover{color:#13d8ff}.click-hint{margin-top:7px;color:#6f7b8a;font-size:.65rem}.image-fallback{background:linear-gradient(145deg,#111923,#090d13)!important}
