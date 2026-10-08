@@ -1,95 +1,101 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PRO ZEN — Running · Sport · Lifestyle</title>
-<meta name="description" content="PRO ZEN — running, chaussures, vêtements, hiver et parfums.">
-<link rel="stylesheet" href="style.css?v=12">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRO ZEN — Running, sport & lifestyle</title>
+<meta name="description" content="PRO ZEN — sélection running, chaussures, vêtements, hiver et parfums.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
-<div class="topline">⚡ PRO ZEN · RUNNING · SPORT · LIFESTYLE · NOUVELLES OFFRES</div>
+<div class="announce"><span>PRO ZEN</span><span>RUNNING / SPORT / LIFESTYLE</span><span>COLLECTION 2026</span></div>
 
 <header class="header">
-  <a class="brand" href="#home"><img src="logo.svg" alt="PRO ZEN"><div><b>PRO ZEN</b><small>RUNNING · SPORT · LIFESTYLE</small></div></a>
-  <nav class="nav"><a href="#home">Accueil</a><a href="#running">Running</a><a href="#products">Chaussures</a><a href="#winter">Vêtements</a><a href="#perfumes">Parfums</a><a href="#promo">Promotions</a></nav>
-  <div class="head-tools"><label><span>⌕</span><input id="search" type="search" placeholder="Rechercher un produit..."></label><button class="tool" type="button">♡</button><button id="cartOpen" class="tool cart-tool" type="button">🛒<b id="count">0</b></button></div>
+  <a class="brand" href="#home"><img src="logo.svg" alt="PRO ZEN"><div><b>PRO ZEN</b><small>MOVE WITH PURPOSE</small></div></a>
+  <nav class="nav"><a href="#home">Accueil</a><a href="#running">Running</a><a href="#products">Shop</a><a href="#winter">Outdoor</a><a href="#perfumes">Lifestyle</a><a href="#promo">Promos</a></nav>
+  <div class="head-tools">
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Rechercher..."></label>
+    <button id="cartOpen" class="cart-button" type="button"><span>Panier</span><b id="count">0</b></button>
+  </div>
 </header>
-
-<div class="subnav"><a href="#products">🏃 Running</a><a href="#products">👟 Chaussures</a><a href="#products">👕 Vêtements</a><a href="#winter">❄ Hiver</a><a href="#products">🎒 Accessoires</a><a href="#perfumes">◉ Parfums</a><a href="#promo">🏷 Promotions</a></div>
 
 <main id="home">
 <section class="hero">
   <div class="hero-copy">
-    <div class="eyebrow">RUNNING · PERFORMANCE · STYLE</div>
-    <h1>Plus loin.<br><span>Plus vite.</span><br>Plus zen.</h1>
-    <p>Une sélection sport et running pensée pour l'entraînement, la compétition et le quotidien.</p>
-    <a href="#products" class="btn primary">Voir la collection →</a>
-    <div class="brands"><img src="https://cdn.simpleicons.org/nike/ffffff" alt="Nike"><img src="https://cdn.simpleicons.org/adidas/ffffff" alt="adidas"><img src="https://cdn.simpleicons.org/puma/ffffff" alt="PUMA"><img src="https://cdn.simpleicons.org/asics/ffffff" alt="ASICS"><img src="https://cdn.simpleicons.org/hoka/ffffff" alt="HOKA"></div>
+    <div class="kicker">01 / PERFORMANCE EDIT</div>
+    <h1>RUN<br><em>YOUR</em><br>WAY.</h1>
+    <p>Des silhouettes sport pensées pour bouger : running, entraînement, outdoor et lifestyle.</p>
+    <div class="hero-actions"><a href="#products" class="btn primary">SHOP NOW <span>↗</span></a><a href="#running" class="btn ghost">EXPLORER RUNNING</a></div>
+    <div class="hero-stats"><div><strong>RUN</strong><span>Chaussures</span></div><div><strong>MOVE</strong><span>Vêtements</span></div><div><strong>ZEN</strong><span>Lifestyle</span></div></div>
   </div>
-  <div class="hero-photo"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1400&q=88" alt="Coureur sur une route"></div>
+  <div class="hero-visual">
+    <div class="hero-photo"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1500&q=90" alt="Coureur sur route"></div>
+    <div class="hero-stamp">PRO<br>ZEN<br><small>EST. 2026</small></div>
+    <div class="hero-label">ROAD / SPEED / FOCUS</div>
+  </div>
 </section>
 
-<section class="quickcats">
-<a href="#products" data-filter="Chaussures"><span>👟</span><b>Chaussures</b><small>Route · Trail · Piste</small></a>
-<a href="#products" data-filter="Vêtements"><span>👕</span><b>Vêtements</b><small>Running · Training</small></a>
-<a href="#running" data-filter="Running"><span>🏃</span><b>Running</b><small>Performance</small></a>
-<a href="#winter" data-filter="Hiver"><span>❄</span><b>Hiver</b><small>Doudounes · Vestes</small></a>
-<a href="#products" data-filter="Accessoires"><span>🎒</span><b>Accessoires</b><small>Casquettes · Sacs</small></a>
-<a href="#perfumes" data-filter="Parfums"><span>◉</span><b>Parfums</b><small>Grandes maisons</small></a>
-<a href="#promo" data-filter="Promotion"><span>🏷</span><b>Promotions</b><small>Prix réduits</small></a>
+<section class="marquee"><div>RUNNING <i>✦</i> TRAINING <i>✦</i> OUTDOOR <i>✦</i> LIFESTYLE <i>✦</i> RUNNING <i>✦</i> TRAINING <i>✦</i> OUTDOOR <i>✦</i> LIFESTYLE</div></section>
+
+<section class="category-strip">
+  <a href="#products" data-filter="Running"><span>01</span><b>RUNNING</b><small>Route / piste / trail</small></a>
+  <a href="#products" data-filter="Chaussures"><span>02</span><b>FOOTWEAR</b><small>Chaussures performance</small></a>
+  <a href="#products" data-filter="Vêtements"><span>03</span><b>APPAREL</b><small>Tees / shorts / tops</small></a>
+  <a href="#products" data-filter="Hiver"><span>04</span><b>OUTDOOR</b><small>Doudounes / vestes</small></a>
+  <a href="#products" data-filter="Parfums"><span>05</span><b>SCENT</b><small>Les grands classiques</small></a>
 </section>
 
-<section id="products" class="section" data-section="catalogue">
-  <div class="section-title"><div><div class="eyebrow">NOS MEILLEURES VENTES</div><h2>Les produits du moment</h2></div><a class="text-link" href="#products">Voir tout →</a></div>
-  <div id="filterRow" class="filter-row"><button class="filter active" data-filter="Tous">Tous</button><button class="filter" data-filter="Running">Running</button><button class="filter" data-filter="Chaussures">Chaussures</button><button class="filter" data-filter="Vêtements">Vêtements</button><button class="filter" data-filter="Hiver">Hiver</button><button class="filter" data-filter="Parfums">Parfums</button><button class="filter" data-filter="Promotion">Promotions</button></div>
+<section id="products" class="section shop-section">
+  <div class="section-heading"><div><div class="kicker">02 / THE SHOP</div><h2>Choisis ton <em>terrain.</em></h2></div><p>Une sélection claire, rapide à parcourir.</p></div>
+  <div id="filterRow" class="filter-row">
+    <button class="filter active" data-filter="Tous">Tout</button><button class="filter" data-filter="Running">Running</button><button class="filter" data-filter="Chaussures">Chaussures</button><button class="filter" data-filter="Vêtements">Vêtements</button><button class="filter" data-filter="Hiver">Outdoor</button><button class="filter" data-filter="Parfums">Lifestyle</button><button class="filter" data-filter="Promotion">Promos</button>
+  </div>
   <div id="productGrid" class="product-grid"></div>
-<p class="photo-note">📸 Clique sur un produit pour voir sa photo en grand, choisir les variantes et l'ajouter au panier.</p>
+  <p class="photo-note">Sélectionne un article pour voir les tailles, couleurs, quantité et le lien officiel de la marque.</p>
 </section>
 
-<section id="running" class="section dark-section">
-  <div class="section-title"><div><div class="eyebrow">NOUVEAUTÉS RUNNING</div><h2>Pour la route, la piste et le trail.</h2></div><span class="muted">Chaussures, pointes et textiles</span></div>
-  <div id="runningGrid" class="mini-grid"></div>
+<section id="running" class="feature-section">
+  <div class="feature-inner">
+    <div class="section-heading light"><div><div class="kicker">03 / RUNNING LAB</div><h2>Built to <em>move.</em></h2></div><p>Des modèles pour la route, la piste et les séances rapides.</p></div>
+    <div id="runningGrid" class="mini-grid"></div>
+  </div>
 </section>
 
-<section id="winter" class="winter">
-  <div class="winter-photo"><img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=1400&q=88" alt="Tenue chaude d'hiver"></div>
-  <div class="winter-copy"><div class="eyebrow">COLLECTION HIVER</div><h2>Reste au chaud.<br>Reste en mouvement.</h2><p>Doudounes, parkas et couches techniques pour les jours froids.</p><a href="#products" data-filter-link="Hiver" class="btn primary">Découvrir l'hiver →</a></div>
+<section id="winter" class="split-feature">
+  <div class="split-photo"><img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=1500&q=90" alt="Tenue outdoor d'hiver"></div>
+  <div class="split-copy"><div class="kicker">04 / OUTDOOR</div><h2>Cold outside.<br><em>Fire inside.</em></h2><p>Doudounes, vestes et couches chaudes pour garder le mouvement quand les températures baissent.</p><a href="#products" data-filter-link="Hiver" class="btn primary">VOIR OUTDOOR ↗</a></div>
 </section>
 
-<section id="perfumes" class="section">
-  <div class="section-title"><div><div class="eyebrow">SÉLECTION PARFUMS</div><h2>Les grands classiques.</h2></div><span class="muted">Dior · Chanel · YSL · Armani · Rabanne</span></div>
+<section id="perfumes" class="section lifestyle-section">
+  <div class="section-heading"><div><div class="kicker">05 / LIFESTYLE</div><h2>Finish with <em>character.</em></h2></div><p>Une sélection parfum pour compléter le look.</p></div>
   <div id="perfumeGrid" class="perfume-grid"></div>
 </section>
 
-<section id="promo" class="promo-band">
-  <div><div class="eyebrow">OFFRES DU MOMENT</div><h2>Des prix plus doux.<br>La même envie de courir.</h2><p>Les prix affichés et la disponibilité peuvent changer chez les vendeurs.</p></div>
-  <a href="#products" data-filter-link="Promotion" class="btn primary">Voir les promos →</a>
+<section id="promo" class="promo">
+  <div><div class="kicker">06 / DROP ALERT</div><h2>Prix réduits.<br><em>Énergie intacte.</em></h2><p>Les prix et disponibilités peuvent évoluer chez les vendeurs officiels.</p></div>
+  <a href="#products" data-filter-link="Promotion" class="btn dark">VOIR LES PROMOS ↗</a>
 </section>
 
-<section class="lookbook section">
-  <div class="section-title"><div><div class="eyebrow">LOOKBOOK</div><h2>Le sport, porté.</h2></div><span class="muted">Photographies de modèles pour l'ambiance visuelle.</span></div>
-  <div class="brand-gallery"><span>Marques sélectionnées</span><div><img src="https://cdn.simpleicons.org/nike/ffffff" alt="Nike"><img src="https://cdn.simpleicons.org/adidas/ffffff" alt="adidas"><img src="https://cdn.simpleicons.org/puma/ffffff" alt="PUMA"><img src="https://cdn.simpleicons.org/asics/ffffff" alt="ASICS"><img src="https://cdn.simpleicons.org/hoka/ffffff" alt="HOKA"><img src="https://cdn.simpleicons.org/thenorthface/ffffff" alt="The North Face"><img src="https://cdn.simpleicons.org/patagonia/ffffff" alt="Patagonia"><img src="https://cdn.simpleicons.org/moncler/ffffff" alt="Moncler"></div></div>
-  <div class="look-grid">
-    <figure><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=88" alt="Coureur pendant une course"><figcaption>RACE DAY / SPEED</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=88" alt="Athlète pendant une séance"><figcaption>TRAINING / POWER</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1200&q=88" alt="Athlète en extérieur"><figcaption>OUTDOOR / ENDURANCE</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=88" alt="Coureur sur route"><figcaption>ROAD / TEMPO</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1200&q=88" alt="Modèle en entraînement"><figcaption>RUNNING / TRAINING</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1200&q=88" alt="Coureur en extérieur"><figcaption>OUTDOOR / ENDURANCE</figcaption></figure>
-    <figure><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=88" alt="Coureur en mouvement"><figcaption>PERFORMANCE / ROUTE</figcaption></figure>
+<section class="editorial section">
+  <div class="section-heading"><div><div class="kicker">07 / PRO ZEN EDIT</div><h2>Sport is a <em>mindset.</em></h2></div><p>Des images d'ambiance pour l'univers PRO ZEN.</p></div>
+  <div class="editorial-grid">
+    <figure class="wide"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1500&q=90" alt="Course de running"><figcaption>RACE DAY / SPEED</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=90" alt="Entraînement"><figcaption>TRAIN / POWER</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1000&q=90" alt="Outdoor"><figcaption>OUTDOOR / ENDURANCE</figcaption></figure>
   </div>
 </section>
 
-<section class="quote"><div class="photo-ribbon"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=88" alt="Athlète en entraînement"><img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=1200&q=88" alt="Coureur en extérieur"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=88" alt="Course de running"></div><div class="quote-inner"><span class="quote-mark">“</span><p>Bismillah — prends le temps de vérifier ton article, ta taille, ta couleur et ton total avant de commander.</p></div></section>
+<section class="manifesto"><div class="manifesto-photo"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=90" alt="Athlète en entraînement"></div><div><div class="kicker">PRO ZEN / 2026</div><h2>Move with purpose.</h2><p>Choisis ton équipement, avance à ton rythme et garde l'essentiel : le mouvement.</p></div></section>
 </main>
 
 <aside id="cart" class="cart" aria-hidden="true">
-  <div class="cart-head"><div><div class="eyebrow">MON PANIER</div><h2>Ta sélection</h2></div><button id="cartClose" class="close">×</button></div>
+  <div class="cart-head"><div><div class="kicker">PANIER</div><h2>Ta sélection</h2></div><button id="cartClose" class="close">×</button></div>
   <div id="cartItems" class="cart-items"></div>
-  <div class="cart-bottom"><div class="total-row"><span>Sous-total</span><b id="cartTotal">0,00 €</b></div><div class="payments"><span>VISA</span><span>MC</span><span>PayPal</span><span>Apple Pay</span></div><button id="checkout" class="btn primary full">Passer la commande →</button><small>Paiement réel à connecter à un prestataire (ex. Stripe).</small><button id="empty" class="clear">Vider le panier</button></div>
+  <div class="cart-bottom"><div class="total-row"><span>Sous-total</span><b id="cartTotal">0,00 €</b></div><div class="payments"><span>VISA</span><span>MC</span><span>PAYPAL</span><span>APPLE PAY</span></div><button id="checkout" class="btn primary full">PASSER LA COMMANDE ↗</button><small>Paiement réel à connecter à un prestataire. Aucun paiement n'est effectué sur ce site actuellement.</small><button id="empty" class="clear">Vider le panier</button></div>
 </aside>
-
 <div id="overlay" class="overlay hidden"></div>
 
 <div id="productModal" class="modal hidden" aria-hidden="true">
@@ -97,19 +103,24 @@
   <button id="modalClose" class="modal-x">×</button>
   <div class="modal-media"><img id="modalImg" src="" alt=""></div>
   <div class="modal-info">
-   <div id="modalBrand" class="eyebrow"></div><h2 id="modalTitle"></h2><div id="modalPrice" class="modal-price"></div>
+   <div id="modalBrand" class="kicker"></div><h2 id="modalTitle"></h2><div id="modalPrice" class="modal-price"></div>
    <p id="modalDescription" class="modal-description"></p>
-   <label>Taille</label><div id="sizes" class="options"></div>
-   <label>Couleur</label><div id="colors" class="options"></div>
-   <label>Quantité</label><div class="quantity"><button id="minus">−</button><b id="qty">1</b><button id="plus">+</button></div>
-   <button id="playVoice" class="voice-btn" type="button">🔊 Écouter le message</button><button id="addVariant" class="btn primary full">Ajouter au panier</button>
-   <a id="official" class="official" target="_blank" rel="noopener">Voir la fiche du vendeur ↗</a>
+   <label>TAILLE</label><div id="sizes" class="options"></div>
+   <label>COULEUR</label><div id="colors" class="options"></div>
+   <label>QUANTITÉ</label><div class="quantity"><button id="minus">−</button><b id="qty">1</b><button id="plus">+</button></div>
+   <button id="playVoice" class="voice-btn" type="button">🔊 Écouter le message</button>
+   <button id="addVariant" class="btn primary full">AJOUTER AU PANIER</button>
+   <a id="official" class="official" target="_blank" rel="noopener">VOIR LA FICHE OFFICIELLE ↗</a>
   </div>
  </div>
 </div>
 
 <div id="toast" class="toast"></div>
-<footer class="footer"><div class="brand"><img src="logo.svg" alt="PRO ZEN"><div><b>PRO ZEN</b><small>RUNNING · SPORT · LIFESTYLE</small></div></div><div><a href="#home">Accueil</a><a href="#products">Produits</a><a href="#winter">Hiver</a><a href="#perfumes">Parfums</a></div><span>© 2026 PRO ZEN</span></footer>
-<script src="script.js?v=12"></script>
+<footer class="footer">
+  <div class="footer-brand"><img src="logo.svg" alt="PRO ZEN"><div><b>PRO ZEN</b><small>MOVE WITH PURPOSE</small></div></div>
+  <div class="footer-links"><a href="#home">Accueil</a><a href="#products">Shop</a><a href="#running">Running</a><a href="#winter">Outdoor</a><a href="#perfumes">Lifestyle</a></div>
+  <span>© 2026 PRO ZEN</span>
+</footer>
+<script src="script.js?v=20"></script>
 </body>
 </html>
