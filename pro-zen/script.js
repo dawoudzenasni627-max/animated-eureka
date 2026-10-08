@@ -123,7 +123,7 @@ function render(){
   return ok&&p[0].toLowerCase().includes(state.query.toLowerCase());
  });
  $("productGrid").innerHTML=list.length?list.map((p)=>card(p,PRODUCTS.indexOf(p))).join(""):'<p class="muted">Aucun produit trouvé.</p>';
- $("runningGrid").innerHTML=PRODUCTS.filter(p=>["Running","Chaussures"].includes(p[2])).slice(0,6).map((p)=>'<article class="mini-card" data-open="'+PRODUCTS.indexOf(p)+'"><div class="mini-photo"><img src="'+p[7]+'" alt="'+p[0]+'"></div><div><strong>'+p[0]+'</strong><span>'+p[1]+"</span></div></article>").join("");
+ $("apparelGrid").innerHTML=PRODUCTS.filter(p=>p[2]==="Vêtements").slice(0,12).map((p)=>card(p,PRODUCTS.indexOf(p))).join("");\n $("runningGrid").innerHTML=PRODUCTS.filter(p=>["Running","Chaussures"].includes(p[2])).slice(0,6).map((p)=>'<article class="mini-card" data-open="'+PRODUCTS.indexOf(p)+'"><div class="mini-photo"><img src="'+p[7]+'" alt="'+p[0]+'"></div><div><strong>'+p[0]+'</strong><span>'+p[1]+"</span></div></article>").join("");
  $("perfumeGrid").innerHTML=PRODUCTS.filter(p=>p[2]==="Parfums").slice(0,5).map((p)=>'<article class="perfume-card" data-open="'+PRODUCTS.indexOf(p)+'"><div class="perfume-photo"><img src="'+p[7]+'" alt="'+p[0]+'"></div><div><small>'+p[1]+'</small><h3>'+p[0]+"</h3></div></article>").join("");
 }
 function openModal(i){
